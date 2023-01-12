@@ -33,6 +33,19 @@ public class Song {
       * song easily as well!
       * What kind of mutator (setter) methods will you need?
       */
+    public String getName(){
+        return name;
+    }
 
+    public String getArtist(){
+        return artist;
+    }
 
+    public int getMinutes(){
+        return min;
+    }
+
+    public int getSeconds(){
+        return sec;
+    }
 }
