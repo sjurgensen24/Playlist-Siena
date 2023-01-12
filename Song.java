@@ -52,4 +52,20 @@ public class Song {
     public boolean getIfLiked(){
         return liked;
     }
+
+    public String toString(){
+        return name + "by" + artist + "(" + min + ":" + sec + ")";
+    }
+
+    public void like(){
+        name += "-- liked";
+        liked = true;
+    }
+
+    public void unlike(){
+        String unliked = "";
+        unliked += name.substring(0, name.length() - 8);
+        name = unliked;
+        liked = false;
+    }
 }
