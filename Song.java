@@ -48,4 +48,8 @@ public class Song {
     public int getSeconds(){
         return sec;
     }
+
+    public boolean getIfLiked(){
+        return liked;
+    }
 }
