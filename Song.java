@@ -5,9 +5,11 @@
  */
 public class Song {
     //Fields-- what information do we want each Song to store?
-
-
-
+    private String name;
+    private String artist;
+    private int min;
+    private int sec;
+    private boolean liked;
 
     /**
      * Constructor-- what information needs to be given to make a Song?
