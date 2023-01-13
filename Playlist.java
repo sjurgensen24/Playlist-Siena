@@ -46,4 +46,47 @@ public class Playlist {
         Song s = playlist.get(pos);
         s.like();
     }
+
+    public String printAllSongs(){
+        String allSongs = "";
+        for (int i = 0; i < playlist.size() - 1; i++){
+            allSongs += playlist.get(i).toString();
+        }
+        return allSongs;
+    }
+
+    public String printLikedSongs(){
+        String likedSongs = "";
+        for (int i = 0; i < playlist.size() - 1; i++){
+            if (playlist.get(i).getIfLiked() == true){
+                likedSongs += playlist.get(i).toString();
+            }
+        }
+        return likedSongs;
+    }
+
+    public int totalMin(){
+        int totalMin = 0;
+        for (int i = 0; i < playlist.size() - 1; i++){
+            totalMin += playlist.get(i).getMinutes();
+        }
+        return totalMin;
+    }
+
+    public int totalSec(){
+        int totalSec = 0;
+        for (int i = 0; i < playlist.size() - 1; i++){
+            totalSec += playlist.get(i).getSeconds();
+        }
+        return totalSec;
+    }
+
+    public void removeUnliked(){
+        for (int i = 0; i < playlist.size() - 1; i++){
+            if(playlist.get(i).getIfLiked() == false){
+                playlist.remove(i);
+                i--;
+            }
+        }
+    }
 }
